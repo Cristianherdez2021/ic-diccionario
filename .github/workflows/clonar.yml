@@ -1,0 +1,14 @@
+name: Ejemplo Forked Repo
+
+on:
+  push:
+
+jobs:
+  clonar-otro-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio externo
+        run: git clone https://github.com/octocat/Hello-World.git
+
+      - name: Listar contenido del repositorio clonado
+        run: ls -la Hello-World
